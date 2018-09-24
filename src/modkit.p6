@@ -1,7 +1,8 @@
 #!/usr/bin/perl6
 
 sub install ($install
-          , :$path="" ) {
+          , :$path="" 
+          , :$custom_dir="~/.steam/steam/steamapps/common/Team Fortress 2/tf/custom") {
     say "installing $install";
     shell "mkdir -p ~/.modkit";
     shell "git clone https://$install ~/.modkit/$install";
